@@ -1,11 +1,33 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/Mine/Mine",
+    "pages/choosecinema/choosecinema",
+    "pages/choosetime/choosetime",
+    "pages/chooseseats/chooseseats",
+    "pages/buycinema/buycinema"
   ],
   "window": {
-    "navigationBarTextStyle": "black",
-    "navigationStyle": "custom"
+    "navigationBarTitleText": "狗眼购票系统",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "iconPath": "static/home.png",
+        "selectedIconPath": "static/homeselect.png",
+        "pagePath": "pages/index/index",
+        "text": "主页"
+      },
+      {
+        "iconPath": "static/mine.png",
+        "selectedIconPath": "static/mineselect.png",
+        "pagePath": "pages/Mine/Mine",
+        "text": "我的"
+      }
+    ]
   },
   "style": "v2",
   "rendererOptions": {

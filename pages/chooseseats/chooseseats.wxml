@@ -1,0 +1,41 @@
+<view class="chooseseats">
+  <view class="chooseseats-classes">
+    <view class="classes-normal">
+      <view class="kk"></view>默认分区
+    </view>
+    <view class="classes-gold">
+      <view class="kk">
+      </view>
+      黄金座位区
+    </view>
+  </view>
+  <view class="chooseseats-main">
+    <view class="{{seatstate[index]}}" wx:for="{{seatstate}}" wx:key="{{index}}" bind:tap="chooseseat" data-index="{{index}}">
+    </view>
+    <view class="main-bottom">
+      <view class="classes-normal">
+        <view class="normal"></view>可选
+      </view>
+      <view class="classes-gold">
+        <view class="unchoose">
+        </view>
+        不可售
+      </view>
+      <view class="classes-gold">
+        <view class="normal choose">
+        </view>
+        已售出
+      </view>
+    </view>
+  </view>
+  <view class="choose-info">
+    <view class="title">{{title}}</view>
+    <view class="timeinfo">
+      <view class="timedate">{{date}}</view>
+      <view class="timestart">{{start_time}}</view>
+      <view class="timeend">{{end_time}}</view>
+      <view class="timescreen">{{screen_method}}</view>
+    </view>
+  </view>
+  <view class="choosebutton" bind:tap="gotobuy">{{btnstate}}</view>
+</view>

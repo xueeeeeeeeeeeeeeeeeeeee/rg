@@ -1,0 +1,66 @@
+<view class="choosetime">
+  <view class="choosetime-info">
+    <view class="info-left">
+      <view class="cinematitle">{{title}}</view>
+      <view class="cinemaaddress">{{address}}</view>
+    </view>
+    <view class="info-right">
+      <view class="area">
+        <image src="../../static/area.png" mode="heightFix" />
+        地图
+      </view>
+      <view class="in"></view>
+      <view class="like">
+        <image src="../../static/like.png" mode="heightFix" />
+        收藏
+      </view>
+    </view>
+
+  </view>
+  <view class="choosetime-top">
+    <view class="moviewpic" style="left:{{boxLeft}}vw;top:{{boxTop}}px;">
+      <view class="{{moviestyle[index]}}" wx:for="{{movies}}" data-index="{{index}}" bindtap="moveBox">
+        <image src="{{item.src}}" mode="widthFix" />
+      </view>
+    </view>
+  </view>
+  <view class="choosemovietime">
+    <view class="choosemoviestrage"></view>
+    <view class="choosemovietime-top">
+      <view class="choosemovietime-top-title">
+        {{movies[nowindex].title}}
+        <view class="choosemovietime-top-grade">
+          {{movies[nowindex].grade}}
+        </view>
+      </view>
+      <view class="choosemovietime-top-info">
+        {{movies[nowindex].info}}
+      </view>
+    </view>
+    <view class="choosedate">
+      <view class="{{datestyle[index]}}" wx:for="{{date}}" data-index="{{index}}" bind:tap="choosedate">{{item}}</view>
+    </view>
+    <view class="moviemain">
+      <view class="moviewmain-item" wx:for="{{movietime}}">
+        <view class="moviewmain-item-time">
+          <view class="moviemain-item-start">
+            {{item.start_time}}
+          </view>
+          <view class="moviemain-item-end">
+            {{item.end_time}}
+          </view>
+        </view>
+        <view class="moviewmain-item-info">
+          <view class="moview-item-screen"> {{item.screen_method}}</view>
+          <view class="moview-item-hall"> {{item.hall_name}}</view>
+        </view>
+        <view class="moviewmain-item-price">
+          ￥{{item.price}}
+        </view>
+        <view class="moviewmain-item-button" bind:tap="gotoseats" data-item="{{item}}">
+          {{item.button}}
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

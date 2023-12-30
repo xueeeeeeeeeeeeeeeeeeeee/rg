@@ -1,0 +1,39 @@
+<view class="choosecinema">
+  <view class="choose-top">
+    <image src="../../static/movie1.jpg" mode="heightFix" class="choose-top-img" />
+    <view class="choose-top-right">
+      <view class="top-title">人民万岁！</view>
+      <view class="top-tags">剧情 红色
+        <view class="top-tag">CGS 中国巨幕</view>
+      </view>
+      <view class="top-time">
+        2023-12-29 12:00中国大陆上映 117分钟</view>
+      <view class="top-grades">10.0分<view class="grades-right">狗眼购票评分</view>
+      </view>
+      <view class="wanttosee" wx:if="{{wanttosee==0}}" bind:tap="clickwanttosee">
+        <image src="../../static/wanttosee.png" mode="heightFix" class="wanttosee-img"></image>想看
+      </view>
+      <view class="wanttosee" wx:else="">已想看</view>
+    </view>
+  </view>
+  <view class="choose">
+    <view class="choosedate">
+      <view class="dateitem" wx:for="{{date}}">{{item}}</view>
+    </view>
+    <view class="choosecinemas">
+      <view class="choosecinemaitem" wx:for="{{allcinema}}" data-item="{{item}}"  bind:tap="gotochoosetime">
+        <view class="choosecinemas-left">
+          <view class="cinematitle">{{item.title}}</view>
+          <view class="cinemaaddress">
+            {{item.address}}
+          </view>
+          <view class="cinemalatest">{{item.latest}}</view>
+        </view>
+        <view class="choosecinemas-right">
+          <view class="cinemaprice">{{item.price}}</view>
+          <view class="cinemadistance">{{item.distance}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

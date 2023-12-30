@@ -1,11 +1,10 @@
-// pages/index/index.js
+// pages/Mine/Mine.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    imageUrls:["../../static/swaper1.jpg","../../static/swaper2.jpg"],
 
   },
 
@@ -58,9 +57,10 @@ Page({
 
   },
 
-  gotochoose(){
-    wx.navigateTo({
-      url: '/pages/choosecinema/choosecinema'
-    });
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage() {
+
   }
 })

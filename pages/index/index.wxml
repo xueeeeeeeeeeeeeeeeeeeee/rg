@@ -1,28 +1,77 @@
-<!--index.wxml-->
-<navigation-bar title="Weixin" back="{{false}}" color="black" background="#FFF"></navigation-bar>
-<scroll-view class="scrollarea" scroll-y type="list">
-  <view class="container">
-    <view class="userinfo">
-      <block wx:if="{{canIUseNicknameComp && !hasUserInfo}}">
-        <button class="avatar-wrapper" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
-          <image class="avatar" src="{{userInfo.avatarUrl}}"></image>
-        </button>
-        <view class="nickname-wrapper">
-          <text class="nickname-label">昵称</text>
-          <input type="nickname" class="nickname-input" placeholder="请输入昵称" bind:change="onInputChange" />
-        </view>
-      </block>
-      <block wx:elif="{{!hasUserInfo}}">
-        <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
-        <view wx:else> 请使用2.10.4及以上版本基础库 </view>
-      </block>
-      <block wx:else>
-        <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-      </block>
-    </view>
-    <view class="usermotto">
-      <text class="user-motto">{{motto}}</text>
+<!--pages/index/index.wxml-->
+<view class="indexpage">
+  <view class="container-top">
+    <image src="../../static/dog.jpg" mode="aspectFit" class="container-topimg" />
+    <view class="topselect">
+      <image src="../../static/select.png" mode="aspectFit" class="iconselect" />
+      <input type="text" class="topselect-input" placeholder="搜索电影" bindinput="onSearchInput" />
     </view>
   </view>
-</scroll-view>
+  <swiper indicator-dots="{{true}}" autoplay="{{true}}" interval="{{3000}}" duration="{{500}}" style="width: 60%;">
+    <block wx:for="{{imageUrls}}" wx:key="index">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" mode="aspectFit"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="indexbtn">
+    <view class="indexbtn-item">
+      <image src="../../static/cinema.png" mode="" />
+      <p>电影/影院</p>
+    </view>
+    <view class="indexbtn-item">
+      <image src="../../static/show.png" mode="" />
+      <p>演出</p>
+    </view>
+    <view class="indexbtn-item">
+      <image src="../../static/talkshow.png" mode="" />
+      <p>脱口秀</p>
+    </view>
+  </view>
+  <view class="hotshow">
+  <view class="title">正在热映</view>
+    <view class="movie-item">
+      <image src="../../static/movie1.jpg" mode="heightFix" class="movieimg" />
+      <view>人民万岁!</view>
+      <view class="buybtn" bind:tap="gotochoose">购票</view>
+    </view>
+    <view class="movie-item">
+      <image src="../../static/movie2.jpg" mode="heightFix" class="movieimg" />
+      <view>教父</view>
+      <view class="buybtn">购票</view>
+    </view>
+    <view class="movie-item">
+      <image src="../../static/movie3.jpg" mode="heightFix" class="movieimg" />
+      <view>银河护卫队</view>
+      <view class="buybtn">购票</view>
+    </view>
+    <view class="movie-item">
+      <image src="../../static/movie4.jpg" mode="heightFix" class="movieimg" />
+      <view>扫黑英雄</view>
+      <view class="wantbtn">预售</view>
+    </view>
+  </view>
+  <view class="wantshow">
+  <view class="title">即将上映</view>
+    <view class="movie-item">
+      <image src="../../static/movie1.jpg" mode="heightFix" class="movieimg" />
+      <view>人民万岁!</view>
+      <view class="wantbtn">预售</view>
+    </view>
+    <view class="movie-item">
+      <image src="../../static/movie2.jpg" mode="heightFix" class="movieimg" />
+      <view>教父</view>
+      <view class="wantbtn">预售</view>
+    </view>
+    <view class="movie-item">
+      <image src="../../static/movie3.jpg" mode="heightFix" class="movieimg" />
+      <view>银河护卫队</view>
+      <view class="wantbtn">预售</view>
+    </view>
+    <view class="movie-item">
+      <image src="../../static/movie4.jpg" mode="heightFix" class="movieimg" />
+      <view>变形金刚</view>
+      <view class="wantbtn">预售</view>
+    </view>
+  </view>
+</view>

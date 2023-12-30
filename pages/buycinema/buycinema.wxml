@@ -1,0 +1,59 @@
+<view class="buycinema">
+  <view class="buycinema-top">
+    <view class="top-body">
+      <view class="top-left">
+        <image src="{{src}}" mode="heightFix" />
+      </view>
+      <view class="top-right">
+        <view class="top-title">{{title}}</view>
+        <view class="top-info">
+          <view class="date">{{date}}</view>
+          <view class="start_time">{{start_time}}</view>
+          <view class="end_time">{{end_time}}</view>
+          <view class="screen_method">{{screen_method}}</view>
+        </view>
+        <view class="topcinema">{{cinematitle}}</view>
+        <view class="num">{{num}}张</view>
+      </view>
+    </view>
+
+    <view class="top-bottom">
+      <view class="cant">
+        <image src="../../static/cant.png" mode="heightFix" />
+      </view>不支持退票
+      <view class="can">
+        <image src="../../static/can.png" mode="heightFix" />
+      </view>支持改签
+    </view>
+  </view>
+  <view class="discount">
+    <view class="discount-title">订单优惠</view>
+    <view class="discount-item">
+      <view class="item-title">影票活动与优惠券</view>
+      <view class="item-num1">-￥0.2</view>
+    </view>
+    <view class="discount-item">
+      <view class="item-title">狗享卡</view>
+      <view class="item-num">去绑卡</view>
+    </view>
+    <view class="discount-item">
+      <view class="item-title">观影卡</view>
+      <view class="item-num">去使用</view>
+    </view>
+  </view>
+  <view class="phone">
+    <view class="phonenum">
+      手机号 <view class="phonenumreal">11****13</view>
+    </view>
+    仅用于生成订单，取票码不再通过短信发送
+  </view>
+  <view class="buycinema-needtoknow">
+    <view class="buycinema-needtoknow-title"> 第一部分：退票标准</view>
+    <text> 1. 退票手续费 根据相关规定，消费者退票需要支付一定的手续费用。手续费通常是票价的一定比例，具体比例根据电影院的规定而定。\n\n2. 退票期限 消费者想要退票，需要在电影放映时间前一定时间内进行，超过此时间，电影院可能不予受理或者退款金额会有所减少。一般情况下，退票期限为影片开始前十五分钟。\n\n 3. 退票方式 电影院提供线上和线下两种退票方式。线上退票需要在网站或者移动端进行，线下退票则需要到影院窗口办理。不同的影院可能提供不同的退票方式，请注意查看。 退款方式通常为与消费支付方式一致，即如果消费者是通过支付宝、微信等第三方支付平台支付的电影票款项，则退款也会原路返回至支付账户。如果是通过现金支付的，则退款会以现金形式返还。\n\n4. 改签规定 由于电影票的实体性质，改签一般是指更改电影场次。在改签的过程中，消费者需要选择新的电影场次和座位，并支付相应的手续费用。 改签后若因故不能观看新场次，可以找工作人员更改为其他时间的场次，但不允许退票。 改签时需要注意，不同的场次的票价可能会有所不同，改签后的票价可能会发生变化。\n\n 5. 其他注意事项 如果消费者退票是因为影片放映取消、时间调整或者技术故障等原因，一般电影院会全额退款。 如果在观影过程中发现影片质量出现问题，消费者也可以申请退票，此时需要和影院的工作人员进行协商。 消费者需要注意电影院的退票规定，不同的电影院可能存在一些细微差别。
+    </text>
+  </view>
+  <view class="buycinema-btn">
+    <view class="picre">￥39.6</view>
+    <view class="btn">确认支付</view>
+  </view>
+</view>

@@ -1,62 +1,163 @@
-/**index.wxss**/
-page {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-.scrollarea {
-  flex: 1;
-  overflow-y: hidden;
-}
-
-.userinfo {
+.indexpage {
+  position: relative;
+  overflow: hidden;
+  overflow-y: scroll;
+  width: 100vw;
+  min-height: 100vh;
+  padding-bottom: 20px;
+  background-color: #f1f1f1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: #aaa;
-  width: 80%;
+  gap: 20px;
+
 }
 
-.userinfo-avatar {
-  overflow: hidden;
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
-}
-
-.usermotto {
-  margin-top: 200px;
-}
-
-.avatar-wrapper {
-  padding: 0;
-  width: 56px !important;
-  border-radius: 8px;
-  margin-top: 40px;
-  margin-bottom: 40px;
-}
-
-.avatar {
-  display: block;
-  width: 56px;
-  height: 56px;
-}
-
-.nickname-wrapper {
-  display: flex;
+.container-top {
   width: 100%;
-  padding: 16px;
+  height: 3em;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+}
+
+.container-topimg {
+  margin-right: 20px;
+  border-radius: 20px;
+  height: 40px;
+  width: 40px;
+  /* width: 80px; */
+}
+
+.topselect {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.iconselect {
+  position: absolute;
+  /* width: 20%; */
+  left: -3rem;
+  height: 1.5em;
+}
+
+.topselect-input {
+  width: 100%;
+  height: 70%;
+  border-radius: 3.5em;
+  background-color: #f6f7f9;
+  padding-left: 3em;
+}
+
+.topselect-input::placeholder {
+  color: #d6d8da;
+  font-size: 14px;
+  font-style: italic;
+}
+
+.slide-image {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.indexbtn {
   box-sizing: border-box;
-  border-top: .5px solid rgba(0, 0, 0, 0.1);
-  border-bottom: .5px solid rgba(0, 0, 0, 0.1);
-  color: black;
+  border-radius: 5px;
+  margin-top: 20px;
+  width: 90%;
+  height: 100px;
+  background-color: #fff;
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  padding-left: 10px;
+  gap: 10px;
 }
 
-.nickname-label {
-  width: 105px;
+.indexbtn p {
+  font-size: 10px;
 }
 
-.nickname-input {
-  flex: 1;
+.indexbtn-item {
+  border-radius: 3px;
+  height: 80px;
+  width: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.indexbtn-item image {
+  border-radius: 3px;
+  width: 50px;
+  height: 50px;
+}
+
+.hotshow {
+  padding-top: 20px;
+  width: 90%;
+  height: 160px;
+  background-color: #fff;
+  display: flex;
+position: relative;
+}
+.hotshow .title{
+  position: absolute;
+  top:5px;
+  left: 10px;
+}
+.movie-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 80px;
+}
+
+.movieimg {
+  height: 60%;
+}
+
+.buybtn {
+  width: 50%;
+  background-color: red;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  height: 20px;
+  border-radius: 10px;
+}
+.wantbtn{
+  width: 50%;
+  background-color: #3c9fe6;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  height: 20px;
+  border-radius: 10px;
+}
+.wantshow{
+  padding-top: 20px;
+  width: 90%;
+  height: 160px;
+  background-color: #fff;
+  display: flex;
+position: relative;
+}
+.wantshow .title{
+  position: absolute;
+  top:5px;
+  left: 10px;
 }
