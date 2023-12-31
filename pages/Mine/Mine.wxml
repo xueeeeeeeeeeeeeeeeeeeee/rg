@@ -1,2 +1,69 @@
 <!--pages/Mine/Mine.wxml-->
-<text>pages/Mine/Mine.wxml</text>
+<scroll-view class="Mine">
+	<view class="flex_container">
+		<view class="user_info">
+			<image class="user_avatar" 
+				src="../../static/images/omnipotent_dog.jpg" 
+				mode="aspectFill"/>
+			<view class="user_info_vertical_part">
+				<text class="user_name">一袭红尘</text>
+				<text class="user_experience">成长值 216/850 ></text>
+				<progress class="progress_bar" percent="33" active color="red" border-radius="1px" stroke-width="2px"/>
+			</view>
+			<view class="nav_personal_page">
+					<text class="nav_personal_page_text">个人中心></text>
+			</view>
+		</view>
+		<view class="favor">
+			<view class="desire_watching">
+				<text class="desire_watching_num">0</text>
+				<text class="desire_watching_text">想看</text>
+				<text class="desire_watching_arrow">></text>
+			</view>
+			<view class="have_watched">
+				<text class="have_watched_num">3</text>
+				<text class="have_watched_text">看过</text>
+				<text class="have_watched_arrow">2部待评价></text>
+			</view>
+		</view>
+		<view class="order">
+			<text class="order_title">我的订单</text>
+				<view class="order_type">
+					<view class="order_type1" bindtap="navigateToOrder">
+						<image src="../../static/images/movie.svg" mode=""/>
+						<text>电影票</text>
+					</view>
+					<view class="order_type2">
+						<image src="../../static/images/show.svg" mode=""/>
+						<text>演出/玩乐</text>
+					</view>
+					<view class="order_type3">
+						<image src="../../static/images/movie_online.svg" mode=""/>
+						<text>在线观影</text>
+					</view>
+					<view class="order_type4">
+						<image src="../../static/images/merch.svg" mode=""/>
+						<text>周边</text>
+					</view>
+				</view>
+		</view>
+		<view class="discount_card">
+			<view class="discount_card1">
+				<text class="discount_card_name">优惠券</text>
+				<text class="discount_card_num">0张可用</text>
+			</view>
+			<view class="discount_card2">
+				<text class="discount_card_name">影城卡</text>
+				<text class="discount_card_num">0张可用</text>
+			</view>
+			<view class="discount_card3">
+				<text class="discount_card_name">狗享卡</text>
+				<text class="discount_card_num">去绑卡</text>
+			</view>
+			<view class="discount_card4">
+				<text class="discount_card_name">汪币</text>
+				<text class="discount_card_num">217</text>
+			</view>
+		</view>
+	</view>
+</scroll-view>

@@ -11,6 +11,24 @@ Page({
       }
     });
   },
+  navigateToRefund: function() {
+    wx.navigateTo({
+      url: `/pages/Refund/Refund?order_info=${
+        JSON.stringify(this.data.order_info)
+      }`,
+      fail:res=>{
+        console.log(res);
+      }
+    });
+  },
+  navigateTochoosecinema: function() {
+    wx.navigateTo({
+      url: `/pages/choosecinema/choosecinema`,
+      fail:res=>{
+        console.log(res);
+      }
+    });
+  },
   /**
    * 页面的初始数据
    */

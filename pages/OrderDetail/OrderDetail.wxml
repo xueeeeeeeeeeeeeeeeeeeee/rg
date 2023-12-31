@@ -63,7 +63,7 @@
 			<text class="order_detail_num">订单编号： 24655754949</text>
 			<text class="order_detail_time">{{"订单时间： 2023年"+order_info.time}}</text>
 			<view class="btn_group" wx:if="{{!order_info.isfinished&&!order_info.iscanceled}}">
-				<view class="btn_left">
+				<view class="btn_left" bind:tap="navigateTochoosecinema">
 					<view class="btn_change">申请改签</view>
 					<text class="change_rule">未取票目距开场时间大于24小时，可免费改签 ></text>
 				</view>

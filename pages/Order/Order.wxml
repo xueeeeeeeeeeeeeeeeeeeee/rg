@@ -22,8 +22,8 @@
       <view class="order_bottom">
         <text class="order_price">总价：{{item.price}}</text>
         <view class="btn_group" wx:if="{{!item.isfinished&&item.ischanged}}">
-          <view class="btn_refund">申请退款</view>
-          <view class="btn_reschedule">申请改签</view>
+          <view class="btn_refund" bind:tap="navigateToRefund">申请退款</view>
+          <view class="btn_reschedule" bind:tap="navigateTochoosecinema">申请改签</view>
         </view>
         <view class="btn_delete_order" wx:else>删除订单</view>
       </view>

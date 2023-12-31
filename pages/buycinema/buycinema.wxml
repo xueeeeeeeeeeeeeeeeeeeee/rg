@@ -54,6 +54,6 @@
   </view>
   <view class="buycinema-btn">
     <view class="picre">￥39.6</view>
-    <view class="btn">确认支付</view>
+    <view class="btn" bind:tap="navigateToOrder">确认支付</view>
   </view>
 </view>

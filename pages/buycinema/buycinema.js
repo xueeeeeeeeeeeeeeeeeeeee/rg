@@ -1,6 +1,13 @@
 // pages/buycinema/buycinema.js
 Page({
-
+  navigateToOrder: function() {
+    wx.navigateTo({
+      url: `/pages/Order/Order`,
+      fail:res=>{
+        console.log(res);
+      }
+    });
+  },
   /**
    * 页面的初始数据
    */

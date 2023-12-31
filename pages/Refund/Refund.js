@@ -10,6 +10,16 @@ Page({
       }
     });
   },
+  redirectToindex: function() {
+    wx.redirectTo({
+      url: `/pages/index/index?order_info=${
+        JSON.stringify(this.data.order_info)
+      }`,
+      fail:res=>{
+        console.log(res);
+      }
+    });
+  },
   /**
    * 页面的初始数据
    */

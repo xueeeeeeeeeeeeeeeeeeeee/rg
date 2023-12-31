@@ -10,6 +10,14 @@ Page({
       }
     });
   },
+  navigateTochoosecinema: function() {
+    wx.navigateTo({
+      url: `/pages/choosecinema/choosecinema`,
+      fail:res=>{
+        console.log(res);
+      }
+    });
+  },
   /**
    * 页面的初始数据
    */
