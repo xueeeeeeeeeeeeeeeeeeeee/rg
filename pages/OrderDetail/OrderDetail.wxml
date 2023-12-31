@@ -1,0 +1,88 @@
+<!--pages/OrderDetail/OrderDetail.wxml-->
+<scroll-view class="OrderDetail" scroll-y="true">
+	<view class="flex_container">
+		<view class="cinema_info">
+			<view class="movie_info_part0">
+				<text class="cinema_name">{{order_info.cinema}}</text>
+				<view class="cinema_info_icon_group">
+					<image src="../../static/images/location.svg" mode="" class="location"/>
+					<image src="../../static/images/phone.svg" mode="" class="phone"/>
+				</view>
+			</view>
+			<view class="movie_info_part1">
+			<view class="circle1"></view>
+			<view class="circle2"></view>
+			<view class="circle3"></view>
+				<view class="flex_box">
+					<view class="movie_info_part1_nameandfeature">
+						<text class="movie_name">{{order_info.name}}</text>
+						<text class="movie_feature">{{order_info.type+" "+order_info.num}}</text>
+					</view>
+					<image src="../../static/images/omnipotent_dog.jpg" mode="" class="movie_info_part1_poster"/>
+				</view>
+				<view class="movie_info_part1_timeandsite">
+					<view class="time">
+						<view class="date">后天01-02</view>
+						<view class="clock">14:30~16:17</view>
+					</view>
+					<view class="site">
+						<view class="movie_theater">{{order_info.theater}}</view>
+						<view class="movie_site">{{order_info.site}}</view>
+					</view>
+				</view>
+			</view>
+			<view class="movie_info_part2">
+				<text>取电影票</text>
+				<view class="mark_container">
+					<image src="../../static/images/QR_code.png" mode="" class="QR_code"/>
+					<view class="captcha {{order_info.isfinished||order_info.iscanceled ? 'gray' : ''}}">验证码：2342 2988 3542 5687</view>
+					<view wx:if="{{order_info.isfinished||order_info.iscanceled}}" class="mark">
+						<image wx:if="{{order_info.isfinished}}" src="../../static/images/finished.svg" mode=""/>
+						<image wx:if="{{order_info.iscanceled}}" src="../../static/images/canceled.svg" mode=""/>
+					</view>
+				</view>
+				<view class="icon_area">
+					<view class="icon_area1">
+						<image src="../../static/images/download.svg" mode=""/>
+						<text>保存到相册</text>
+					</view>
+					<view class="icon_area2">
+						<image src="../../static/images/share.svg" mode=""/>
+						<text>分享给好友</text>
+					</view>
+				</view>
+			</view>
+		</view>
+		<view class="order_detail">
+			<view class="flex_box">
+				<text class="order_detail_title">订单详情</text>
+				<text class="order_detail_price_struction">价格明细 ></text>
+			</view>
+			<text class="order_detail_price">{{"实付金额： ￥"+order_info.price+"（"+order_info.num+"电影票）"}}</text>
+			<text class="order_detail_phone">手机号码： 138****3529</text>
+			<text class="order_detail_num">订单编号： 24655754949</text>
+			<text class="order_detail_time">{{"订单时间： 2023年"+order_info.time}}</text>
+			<view class="btn_group" wx:if="{{!order_info.isfinished&&!order_info.iscanceled}}">
+				<view class="btn_left">
+					<view class="btn_change">申请改签</view>
+					<text class="change_rule">未取票目距开场时间大于24小时，可免费改签 ></text>
+				</view>
+				<view class="btn_right">
+					<view class="btn_change" bind:tap="navigateToRefund">申请退款</view>
+					<text class="change_rule">未取票且距开场时间大于24小时，可免费退款 ></text>
+				</view>
+			</view>
+		</view>
+		<view class="notice">
+			<text class="notice_title">观影须知</text>
+			<text class="notice_content">1.请提前到达影院现场，通过影院自助取票机完成取票
+			2.若取票过程中遇到无法取票等其它问题，请联系影院工作人员进行外理。
+			3.请及时关注电影开场时间，凭票有序检票入场
+			4.如需开具电影票发票，可联系影院工作人员凭当日票根进行开具，若遇到特殊情况请及时联系猫眼客服人员。
+			5.退票、改签服务请参考影院具体政策要求，特殊场次及部
+			分使用卡、券场次订单可能不支持此服务。
+			6.客服电话: 1010-5335，也可在当前页面联系在线客服工作时间: 9:00-22:00，国家法定节假日延至24:00.</text>
+		</view>
+	</view>
+</scroll-view>
+

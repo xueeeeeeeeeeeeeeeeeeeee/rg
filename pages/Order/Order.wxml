@@ -1,0 +1,33 @@
+<!--pages/Order/Order.wxml-->
+<scroll-view class="Order" scroll-y="true">
+	<view class="flex_container">
+		<view class="order" wx:for="{{order_info}}">
+			<view class="order_top">
+				<text class="order_cinema">{{item.cinema}}</text>
+        <view class="flex_box">
+          <text class="order_changed_flag" wx:if="{{item.ischanged}}">改签票</text>
+          <text class="order_status">{{item.status}}</text>
+        </view>
+			</view>
+			<view class="order_middle" bind:tap="navigateToOrderDetail" data-item="{{item}}">
+        <image class="order_poster" src="../../static/images/omnipotent_dog.jpg" mode=""/>
+        <view class="order_detail_text">
+          <text class="order_moviename_and_num">{{item.name+" "+item.num}}</text>
+          <text class="order_time">{{item.time}}</text>
+          <text class="order_site">{{item.theater+" "+item.site}}</text>
+        </view>
+        <view class="btn_command" wx:if="{{item.isfinished}}">评价影片</view>
+        <view class="btn_toticket" wx:if="{{!item.isfinished&&item.ischanged}}">查看取票码</view>
+      </view>
+      <view class="order_bottom">
+        <text class="order_price">总价：{{item.price}}</text>
+        <view class="btn_group" wx:if="{{!item.isfinished&&item.ischanged}}">
+          <view class="btn_refund">申请退款</view>
+          <view class="btn_reschedule">申请改签</view>
+        </view>
+        <view class="btn_delete_order" wx:else>删除订单</view>
+      </view>
+    </view>
+		<text class="order_last_word">已经没有更多咯~</text>
+	</view>
+</scroll-view>

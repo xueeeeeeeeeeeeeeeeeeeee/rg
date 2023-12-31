@@ -1,0 +1,30 @@
+<!--pages/Refund/Refund.wxml-->
+<scroll-view class="Refund" scroll-y="true">
+	<view class="flex_container">
+		<view class="refund_part1">
+			<text class="refund_chance">退款次数</text>
+			<text class="refund_chance_num">本月可退次数：剩余1次（共1次）</text>
+		</view>
+		<view class="refund_part2">
+			<text class="refund_chance">退款方式</text>
+			<view class="flex_box1">
+				<text class="refund_chance_num">原路返回</text>
+				<text class="yellow">（现金将于1-7个工作日内退还到原支付方）</text>
+			</view>
+		</view>
+		<view class="refund_part3">
+			<text class="refund_chance">退还现金</text>
+			<view class="flex_box2">
+				<text class="refund_chance_num">现金</text>
+				<text class="cash">{{order_info.price}}</text>
+			</view>
+		</view>
+		<view class="btn_submit_refund">提交退款申请</view>
+		<view class="warning">
+			<icon type="warn" color="#c9c9c9"/>
+			<text style="color: #a7a5a5;">提交退票申请后不可取消</text>
+		</view>
+	</view>
+</scroll-view>
+
+

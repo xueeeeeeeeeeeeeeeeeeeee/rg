@@ -1,0 +1,151 @@
+/* pages/Order/Order.wxss */
+page{
+	height: 100vh;
+}
+.Order{
+	width: 100%;
+	height: 100%;
+	background: #f5f5f5;
+}
+.Order .flex_container{
+	padding-bottom: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.Order .flex_container .order_last_word{
+	margin-top: 10px;
+	font-size: 13px;
+}
+.Order .order{
+	width: 100%;
+	margin-top: 20px;
+	border-top: 1px solid #00000015;
+	border-bottom: 1px solid #00000015;
+	background: white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.Order .order .order_top{
+	width: 90%;
+	height: 40px;
+	color: #00000085;
+	font-size: 14px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid #00000015;
+}
+.Order .order .order_top .order_changed_flag{
+	width: 50px;
+	margin-right: 10px;
+	font-size: 10px;
+	padding:2px 8px;
+	text-align: center;
+	background: rgba(0, 0, 255, 0.671);
+	color: white;
+	border-radius: 2px;
+}
+.Order .order .order_middle{
+	width: 90%;
+	margin:10px 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.Order .order .order_middle image{
+	width: 70px;
+	height: 90px;
+	flex-shrink: 0;
+	object-fit: cover;
+	margin:  0 10px 0 0;
+}
+.Order .order .order_middle .order_detail_text{
+	flex: 1;
+	overflow: hidden;
+	height: 90px;
+	white-space: nowrap;
+  text-overflow: ellipsis;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.Order .order .order_middle .order_detail_text .order_moviename_and_num{
+	width: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+  text-overflow: ellipsis;
+	font-size: 16px;
+	margin-bottom: 30px;
+}
+.Order .order .order_middle .order_detail_text .order_time{
+	flex: 1;
+	white-space: nowrap;
+	overflow: hidden;
+  text-overflow: ellipsis;
+	color: rgba(0, 0, 0, 0.603);
+	font-size: 13px;
+	font-weight: 700;
+}
+.Order .order .order_middle .order_detail_text .order_site{
+	white-space: nowrap;
+	overflow: hidden;
+  text-overflow: ellipsis;
+	color: rgba(0, 0, 0, 0.5);
+	font-size: 11.5px;
+}
+.Order .order .order_bottom .btn_group{
+	display: flex;
+}
+.Order .order .order_bottom .btn_group view{
+	width: 55px;
+	padding: 3px 6px;
+	text-align: center;
+	border-radius: 100px;
+	color: #00000085;
+	font-size: 13px;
+	border: 1px solid #00000046;
+	margin-left: 10px;
+}
+.Order .order .order_middle .btn_command{
+	width: 60px;
+	flex-shrink: 0;
+	background: red;
+	color: white;
+	border-radius: 40px;
+	text-align: center;
+	padding: 5px;
+	font-size: 13px;
+}
+.Order .order .order_middle .btn_toticket{
+	width: 70px;
+	flex-shrink: 0;
+	background: red;
+	color: white;
+	border-radius: 40px;
+	text-align: center;
+	padding: 5px;
+	font-size: 13px;
+}
+.Order .order .order_bottom{
+	width: 90%;
+	height: 40px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-top: 1px solid #00000015;
+}
+.Order .order .order_bottom .order_price{
+	color: #00000085;
+	font-size: 14px;
+}
+.Order .order .order_bottom .btn_delete_order{
+	width: 55px;
+	padding: 3px 6px;
+	text-align: center;
+	border-radius: 100px;
+	color: #00000085;
+	font-size: 13px;
+	border: 1px solid #00000046;
+}
